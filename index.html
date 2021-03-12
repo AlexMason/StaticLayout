@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kast is Watch Parties Made Easy</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/86979804d6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Navbar Section -->
+    <div id="navbar">
+      <div class="logo"></div>
+      <div>
+        <ul class="nav">
+          <li class="nav-item">
+            <div class="nav-dropdown" onclick="dropdownToggle(this)">
+              <a>About<i class="fas fa-chevron-down"></i></a>
+              <ul class="nav">
+                <li class="nav-item"><a href="#">What is Kast?</a></li>
+                <li class="nav-item"><a href="#">Kast TV</a></li>
+                <li class="nav-item">
+                  <a href="#"
+                    >Blog<i class="fas fa-external-link-square-alt"></i
+                  ></a>
+                </li>
+                <li class="nav-item">
+                  <a href="#"
+                    >Press Releases<i
+                      class="fas fa-external-link-square-alt"
+                    ></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="nav-dropdown" onclick="dropdownToggle(this)">
+              <a>Help<i class="fas fa-chevron-down"></i></a>
+              <ul class="nav">
+                <li class="nav-item">
+                  <a href="#"
+                    >Contact Support<i
+                      class="fas fa-external-link-square-alt"
+                    ></i
+                  ></a>
+                </li>
+                <li class="nav-item">
+                  <a href="#"
+                    >FAQ's<i class="fas fa-external-link-square-alt"></i
+                  ></a>
+                </li>
+                <li class="nav-item"><a href="#">Get Kast</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="nav-dropdown" onclick="dropdownToggle(this)">
+              <a>Community<i class="fas fa-chevron-down"></i></a>
+              <ul class="nav">
+                <li class="nav-item"><a href="#">Community Guidelines</a></li>
+                <li class="nav-item"><a href="#">Founders Hall of Fame</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="#">Premium</a>
+          </li>
+          <li class="nav-item">
+            <a class="button" href="#">Open Kast</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Top Hero Section -->
+    <div id="top-container">
+      <div class="container-item">
+        <img src="./assets/laptop-large-p-800.png" width="610px" alt="" />
+      </div>
+      <div class="container-item">
+        <h1>Watch parties made easy.</h1>
+        <p>
+          Watch <strong>whatever you want</strong> with friends online: movies,
+          TV shows, you name it. Share your screen and camera or launch content
+          directly from Kast TV in your watch parties. Join millions of kasters
+          today!
+        </p>
+        <button>Open Kast</button>
+      </div>
+    </div>
+
+    <!-- Featured In Section -->
+    <div id="featured-container">
+      <h2>Featured In</h2>
+      <table>
+        <tbody>
+          <tr>
+            <td><img src="./assets/wired-logo.svg" alt="" /></td>
+            <td><img src="./assets/nerdist-logo.svg" alt="" /></td>
+            <td><img src="./assets/yahoo-finance-logo.svg" alt="" /></td>
+          </tr>
+          <tr>
+            <td><img src="./assets/evening-standard-logo.svg" alt="" /></td>
+            <td><img src="./assets/bbc-logo.svg" alt="" /></td>
+            <td><img src="./assets/daily-mail-logo.svg" alt="" /></td>
+          </tr>
+        </tbody>
+      </table>
+      <blockquote>
+        "Kast has probably never been more relevant — or necessary — than it is
+        right now."
+      </blockquote>
+    </div>
+
+    <!-- What is Kast Section -->
+    <div id="whatiskast-container">
+      <div class="container-item">
+        <h1>What is Kast?</h1>
+        <p>
+          Looking for a place to watch movies, play, and hang out with friends?
+          Hop onto Kast and start sharing experiences real-time!
+        </p>
+        <p>
+          Up to 20 people can share their screen or camera and another 100 can
+          watch in a party. And with Kast TV, you can now stream directly from
+          the cloud.
+        </p>
+        <button>open kast</button>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("scroll", () => {
+        let navbar = document.getElementById("navbar");
+
+        navbar.style.backgroundColor =
+          window.scrollY === 0
+            ? "rgba(85, 121, 119, 0)"
+            : "rgba(85, 121, 119, 0.55)";
+      });
+
+      function dropdownToggle(e) {
+        if (e.children[1].style.display != "block") {
+          let dropdowns = document.querySelectorAll(".nav-dropdown > .nav");
+
+          for (let dropdown of dropdowns) {
+            dropdown.style.display = "none";
+          }
+
+          e.children[1].style.display = "block";
+        } else {
+          e.children[1].style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>
